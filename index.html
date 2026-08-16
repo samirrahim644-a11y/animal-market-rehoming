@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Animal Market Rehoming - Découvrez des animaux disponibles pour adoption et replacement responsable.">
   <title>Animal Market Rehoming</title>
 
   <link rel="stylesheet" href="style.css">
@@ -11,373 +10,160 @@
 
 <body>
 
-  <header class="header">
-    <div class="container nav">
-      <a href="#" class="logo">🐾 Animal Market</a>
+<header>
+  <div class="logo">🐾 Animal Market</div>
 
-      <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#animaux">Animaux</a>
-        <a href="#proposer">Proposer</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#animaux">Animaux</a>
+    <a href="#proposer">Proposer</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main>
+<section id="accueil" class="hero">
+  <div class="badge">🐾 Rehoming responsable</div>
 
-    <!-- ACCUEIL -->
-    <section id="accueil" class="hero">
-      <div class="container hero-content">
+  <h1>
+    Trouvez votre
+    <span>nouveau compagnon</span>
+  </h1>
 
-        <div class="hero-text">
-          <span class="badge">🐾 Rehoming responsable</span>
+  <p>
+    Découvrez des chiens, chats et autres animaux
+    disponibles pour adoption ou replacement responsable.
+  </p>
 
-          <h1>
-            Trouvez votre
-            <span>nouveau compagnon</span>
-          </h1>
+  <a href="#animaux" class="btn">Voir les animaux</a>
+</section>
 
-          <p>
-            Découvrez des chiens, chats et autres animaux disponibles
-            pour adoption ou replacement responsable.
-          </p>
+<section id="animaux" class="catalogue">
 
-          <div class="hero-buttons">
-            <a href="#animaux" class="btn primary">Voir les animaux</a>
-            <a href="#proposer" class="btn secondary">Proposer un animal</a>
-          </div>
+  <h2>🐾 Nos animaux disponibles</h2>
+
+  <p class="intro">
+    Découvrez notre sélection d'animaux.
+  </p>
+
+  <div class="filters">
+    <button onclick="filterAnimals('all')">Tous</button>
+    <button onclick="filterAnimals('chien')">🐶 Chiens</button>
+    <button onclick="filterAnimals('chat')">🐱 Chats</button>
+    <button onclick="filterAnimals('autre')">🐰 Autres</button>
+  </div>
+
+  <div class="animals">
+
+    <article class="animal-card" data-type="chien">
+      <div class="animal-photo">🐶</div>
+      <div class="animal-info">
+        <h3>Max</h3>
+        <p>🐶 Chihuahua</p>
+        <p>📍 Disponible maintenant</p>
+
+        <div class="price">
+          <strong>€450</strong>
+          <span>$520</span>
         </div>
 
-        <div class="hero-image">
-          <div class="dog-circle">🐶</div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- RECHERCHE -->
-    <section class="search-section">
-      <div class="container">
-
-        <div class="search-box">
-
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Rechercher un animal..."
-          >
-
-          <select id="speciesFilter">
-            <option value="all">Toutes les espèces</option>
-            <option value="chien">Chiens</option>
-            <option value="chat">Chats</option>
-            <option value="autre">Autres</option>
-          </select>
-
-          <select id="priceFilter">
-            <option value="all">Tous les prix</option>
-            <option value="0-300">0 - 300 $</option>
-            <option value="301-700">301 - 700 $</option>
-            <option value="701">701 $ et +</option>
-          </select>
-
-          <button class="btn primary" onclick="filterAnimals()">
-            🔎 Rechercher
-          </button>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ANIMAUX -->
-    <section id="animaux" class="animals-section">
-      <div class="container">
-
-        <div class="section-title">
-          <span>🐾 Nos animaux</span>
-          <h2>Animaux disponibles</h2>
-          <p>
-            Découvrez quelques-uns des compagnons actuellement proposés.
-          </p>
-        </div>
-
-        <div id="animalsGrid" class="animals-grid">
-
-          <!-- ANIMAL 1 -->
-          <article
-            class="animal-card"
-            data-name="Chihuahua"
-            data-species="chien"
-            data-price="450"
-          >
-            <div class="animal-photo chihuahua">
-              🐶
-              <span class="status">Disponible</span>
-            </div>
-
-            <div class="animal-info">
-              <h3>Chihuahua</h3>
-
-              <p class="location">📍 Disponible pour rehoming</p>
-
-              <div class="details">
-                <span>🐕 Chien</span>
-                <span>🎂 4 mois</span>
-              </div>
-
-              <div class="card-bottom">
-                <strong>$450</strong>
-                <span>≈ €410</span>
-              </div>
-
-              <button
-                class="contact-btn"
-                onclick="contactAnimal('Chihuahua')"
-              >
-                Contacter
-              </button>
-            </div>
-          </article>
-
-          <!-- ANIMAL 2 -->
-          <article
-            class="animal-card"
-            data-name="Golden Retriever"
-            data-species="chien"
-            data-price="700"
-          >
-            <div class="animal-photo golden">
-              🐕
-              <span class="status">Disponible</span>
-            </div>
-
-            <div class="animal-info">
-              <h3>Golden Retriever</h3>
-
-              <p class="location">📍 Disponible pour rehoming</p>
-
-              <div class="details">
-                <span>🐕 Chien</span>
-                <span>🎂 7 mois</span>
-              </div>
-
-              <div class="card-bottom">
-                <strong>$700</strong>
-                <span>≈ €640</span>
-              </div>
-
-              <button
-                class="contact-btn"
-                onclick="contactAnimal('Golden Retriever')"
-              >
-                Contacter
-              </button>
-            </div>
-          </article>
-
-          <!-- ANIMAL 3 -->
-          <article
-            class="animal-card"
-            data-name="Chaton"
-            data-species="chat"
-            data-price="250"
-          >
-            <div class="animal-photo cat">
-              🐱
-              <span class="status">Disponible</span>
-            </div>
-
-            <div class="animal-info">
-              <h3>Chaton</h3>
-
-              <p class="location">📍 Disponible pour rehoming</p>
-
-              <div class="details">
-                <span>🐈 Chat</span>
-                <span>🎂 3 mois</span>
-              </div>
-
-              <div class="card-bottom">
-                <strong>$250</strong>
-                <span>≈ €230</span>
-              </div>
-
-              <button
-                class="contact-btn"
-                onclick="contactAnimal('Chaton')"
-              >
-                Contacter
-              </button>
-            </div>
-          </article>
-
-        </div>
-
-        <p id="noResults" class="no-results">
-          Aucun animal ne correspond à votre recherche.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- COMMENT ÇA MARCHE -->
-    <section class="how-section">
-      <div class="container">
-
-        <div class="section-title">
-          <span>✨ Simple et rapide</span>
-          <h2>Comment ça marche ?</h2>
-        </div>
-
-        <div class="steps">
-
-          <div class="step">
-            <div>🔎</div>
-            <h3>1. Recherchez</h3>
-            <p>
-              Parcourez les animaux disponibles et trouvez celui qui vous correspond.
-            </p>
-          </div>
-
-          <div class="step">
-            <div>💬</div>
-            <h3>2. Contactez</h3>
-            <p>
-              Contactez le responsable de l'annonce pour obtenir plus d'informations.
-            </p>
-          </div>
-
-          <div class="step">
-            <div>❤️</div>
-            <h3>3. Accueillez</h3>
-            <p>
-              Organisez un replacement responsable et sécurisé de l'animal.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROPOSER -->
-    <section id="proposer" class="form-section">
-      <div class="container">
-
-        <div class="section-title">
-          <span>📢 Votre animal</span>
-          <h2>Proposer un animal</h2>
-          <p>
-            Vous souhaitez publier une annonce ? Remplissez le formulaire.
-          </p>
-        </div>
-
-        <form id="animalForm" class="animal-form">
-
-          <input
-            type="text"
-            id="ownerName"
-            placeholder="Votre nom"
-            required
-          >
-
-          <input
-            type="email"
-            id="ownerEmail"
-            placeholder="Votre email"
-            required
-          >
-
-          <input
-            type="text"
-            id="animalName"
-            placeholder="Nom de l'animal"
-            required
-          >
-
-          <select id="animalSpecies" required>
-            <option value="">Choisir l'espèce</option>
-            <option value="Chien">Chien</option>
-            <option value="Chat">Chat</option>
-            <option value="Autre">Autre</option>
-          </select>
-
-          <input
-            type="text"
-            id="animalAge"
-            placeholder="Âge de l'animal"
-            required
-          >
-
-          <input
-            type="number"
-            id="animalPrice"
-            placeholder="Prix en USD"
-            min="0"
-            required
-          >
-
-          <textarea
-            id="animalDescription"
-            placeholder="Décrivez l'animal..."
-            rows="5"
-            required
-          ></textarea>
-
-          <button type="submit" class="btn primary">
-            Envoyer l'annonce
-          </button>
-
-        </form>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-      <div class="container contact-box">
-
-        <div>
-          <span>📞 Contact</span>
-          <h2>Une question ?</h2>
-          <p>
-            Contactez-nous pour obtenir plus d'informations sur une annonce.
-          </p>
-        </div>
-
-        <a
-          href="https://wa.me/12297207712"
-          class="btn whatsapp"
-          target="_blank"
-        >
-          💬 WhatsApp
+        <a class="contact-btn"
+           href="https://wa.me/12297207712?text=Bonjour%2C%20je%20suis%20intéressé%20par%20Max">
+          Contacter
         </a>
-
       </div>
-    </section>
+    </article>
 
-  </main>
+    <article class="animal-card" data-type="chien">
+      <div class="animal-photo">🐕</div>
+      <div class="animal-info">
+        <h3>Bella</h3>
+        <p>🐶 Petit chien</p>
+        <p>📍 Disponible maintenant</p>
 
-  <footer>
-    <div class="container footer-content">
+        <div class="price">
+          <strong>€600</strong>
+          <span>$690</span>
+        </div>
 
-      <div>
-        <h3>🐾 Animal Market Rehoming</h3>
-        <p>
-          Une plateforme pour faciliter le replacement responsable des animaux.
-        </p>
+        <a class="contact-btn"
+           href="https://wa.me/12297207712?text=Bonjour%2C%20je%20suis%20intéressé%20par%20Bella">
+          Contacter
+        </a>
       </div>
+    </article>
 
-      <div>
-        <p>© 2026 Animal Market Rehoming</p>
+    <article class="animal-card" data-type="chat">
+      <div class="animal-photo">🐱</div>
+      <div class="animal-info">
+        <h3>Luna</h3>
+        <p>🐱 Chat</p>
+        <p>📍 Disponible maintenant</p>
+
+        <div class="price">
+          <strong>€300</strong>
+          <span>$345</span>
+        </div>
+
+        <a class="contact-btn"
+           href="https://wa.me/12297207712?text=Bonjour%2C%20je%20suis%20intéressé%20par%20Luna">
+          Contacter
+        </a>
       </div>
+    </article>
 
-    </div>
-  </footer>
+    <article class="animal-card" data-type="autre">
+      <div class="animal-photo">🐰</div>
+      <div class="animal-info">
+        <h3>Coco</h3>
+        <p>🐰 Lapin</p>
+        <p>📍 Disponible maintenant</p>
 
-  <script src="script.js"></script>
+        <div class="price">
+          <strong>€150</strong>
+          <span>$175</span>
+        </div>
+
+        <a class="contact-btn"
+           href="https://wa.me/12297207712?text=Bonjour%2C%20je%20suis%20intéressé%20par%20Coco">
+          Contacter
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="proposer" class="proposer">
+  <h2>🐾 Vous souhaitez proposer un animal ?</h2>
+
+  <p>
+    Contactez-nous pour présenter votre animal
+    et trouver une nouvelle famille responsable.
+  </p>
+
+  <a class="btn"
+     href="https://wa.me/12297207712?text=Bonjour%2C%20je%20souhaite%20proposer%20un%20animal">
+    Proposer un animal
+  </a>
+</section>
+
+<section id="contact" class="contact">
+  <h2>📞 Contact</h2>
+
+  <p>Vous êtes intéressé par un animal ?</p>
+
+  <a class="contact-btn"
+     href="https://wa.me/12297207712?text=Bonjour%2C%20je%20viens%20du%20site%20Animal%20Market">
+    💬 Nous contacter sur WhatsApp
+  </a>
+</section>
+
+<footer>
+  <p>🐾 Animal Market Rehoming</p>
+  <p>© 2026 — Rehoming responsable</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
